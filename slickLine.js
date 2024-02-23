@@ -127,6 +127,9 @@ $.fn.slickLine = function(ops){
 		//LISTEN FOR HOVER OUT
 		.on('mouseleave.HoverOverDrawLineLeave', function(){
 
+			//DEFINE THE TARGET
+			var target  = $($(this).attr('data-sl-target'));
+
 			//FIRE THE BEFORE REMOVE EVENT
 			$(this).trigger('slickLine.beforeRemove', [$(target)]);
 
